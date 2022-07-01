@@ -1,0 +1,82 @@
+/*
+ * Style Sheet
+ * International Conferences on the Chemistry of Selenium and Tellurium
+ */
+body {
+  font-family: Sans-serif; }
+
+.iccst_h1 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 100px;
+  font-style: bold;
+  color: #cc2; }
+
+#img-link, #img-link img {
+  text-decoration: none !important;
+  border:0px !important;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none; }
+
+.headimg { 
+  margin-top: -40px;
+  margin-bottom: -40px;
+  clip-path: inset(40px 0px 40px 0px); }
+
+.address {
+  margin-bottom: 30px;
+  margin-left: 100px; 
+  margin-top: 30px; }
+
+.inactive {
+  color: #aaa; }
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ddd; 
+  font-size: 10px; }
+
+.frame {
+  margin: 20px; }
+
+.opict {
+  padding: 5px;
+  margin: 10px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #000;
+  float: left; }
+
+.oheading {
+  font-size: 40px;
+  font-style: bold;
+  margin-bottom: 0px; }
+
+.otext {
+  padding-left: 30px;
+  margin-bottom: 50px;
+  width: 800px;
+  height: 120px; }
+
+.spacer {
+  margin-top: 400px; }
+
+.text {
+  width: 900px; }
+
+.videobox {
+  position: relative; }
+
+.videoframe {
+  position: absolute;
+  top: -60px;
+  left: 500px; }
+
+.videotitle {
+  font-size: 10px; }
