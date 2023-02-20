@@ -25,13 +25,18 @@ body {
   margin-bottom: -40px;
   clip-path: inset(40px 0px 40px 0px); }
 
-.address {
+.indent {
   margin-bottom: 30px;
   margin-left: 100px; 
   margin-top: 30px; }
 
 .inactive {
   color: #aaa; }
+
+.indent {
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-top: 30px; }
 
 .footer {
   position: fixed;
