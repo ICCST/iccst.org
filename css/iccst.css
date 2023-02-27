@@ -5,6 +5,10 @@
 body {
   font-family: Sans-serif; }
 
+.iccst_date {
+  font-size: 10px;
+  font-style: italic; }
+
 .iccst_h1 {
   margin-bottom: 10px;
   margin-top: 10px;
