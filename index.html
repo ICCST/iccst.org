@@ -10,11 +10,18 @@
   <!-- jQuery 3.6.3 - see messages/legal.html for copyright & licensing information -->
   <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
   <script>
-    currentPage = 0;
-    const pageNames = ['current.html', 'msg_20220701.html', 'msg_20210122.html', 'legal.html' ];
+    /* add new content at the end of the list */
+    const pageNames = [ 'legal.html', 'sitemap.html', 'msg_20210122.html', 'msg_20220701.html', 'msg_20240108.html', 'current.html' ];
+    let currentPage = pageNames.length - 1;
 
-    function setPage(index, delta) {
-        if ((index >= 0) && (index <= pageNames.length)) {
+    function lightDesk(image, caption) {
+        document.getElementById('lightdeskContent').innerHTML="<img src='" + image + "' />"
+                + "<div class='mediatitle'>" + caption + "</div>";
+        document.getElementById('lightdesk').style.display="block";
+    }
+
+    function setPage(index, delta, title) {
+        if ((index >= 0) && (index < pageNames.length)) {
             currentPage = index;
         } 
         if ((delta > -2) && (delta < 2)) {
@@ -27,27 +34,42 @@
         $.get("messages/" + pageNames[currentPage], function (data, status) {
             $("#CONTENT").html(data);
         });
+        window.history.pushState(currentPage, "iccst.org", "?" + currentPage);
     }
 
     $(document).ready(function() {
-        setPage(0, 0);
+        let page = document.location.search;
+        if (page === "") {
+            page = pageNames.length - 1;
+        } else {
+            page = page.substring(1) - 0;
+        }
+        setPage(page, 0);
     });
   </script>
 </head>
 <body bgcolor="#ffffff">
-<img src="ChemLab.png" class="headimg" /> 
+<img src="images/ChemLab.png" class="headimg" /> 
 <div>
-  <a href="#" onclick="setPage(undefined, -1);" title="Later">&lt;&lt;</a>
-  <a href="#" onclick="setPage(0, 0);">Home</a>
-  <a href="#" onclick="setPage(pageNames.length, -1);">Legal</a>
-  <a href="#" onclick="setPage(undefined, 1);" title="Earlier">&gt;&gt;</a>
+  <a href="#" onclick="setPage(undefined, -1); return false;" title="Earlier">&lt;&lt;</a>
+  <a href="?0" onclick="setPage(pageNames.length - 1, 0); return false;">Home</a>
+  <a href="?2" onclick="setPage(1, 0); return false;">Site Map</a>
+  <a href="?1" onclick="setPage(0, 0); return false;">Legal</a>
+  <a href="#" onclick="setPage(undefined, 1); return false;" title="Newer">&gt;&gt;</a>
+</div>
+<div id="lightdesk" class="lightdesk">
+  <div class="lightdeskFrame">
+    <span class="lightdeskCloseButton" onclick="document.getElementById('lightdesk').style.display='none'">×</span>
+    <div id="lightdeskContent" class="lightdeskContent">
+    </div>
+  </div>
 </div>
 <div class="frame">
 <h1 class="iccst_h1">ICCST.org</h1>
 <div id="CONTENT"></div>
 <div class="spacer">&nbsp;</div>
 <div class="footer">
-<a href="#" onclick="setPage(pageNames.length, -1);">Legal information / Imprint</a><br/>
+<a href="?0" onclick="setPage(1, 0);">Legal information / Imprint</a><br/>
 <a href="https://commons.wikimedia.org/wiki/File:Laboratory_of_the_South_Australian_School_of_Mines_and_Industries_(now_University_of_South_Australia_Building_)(GN03262).jpg" target="_blank">Page header picture source</a>&nbsp;<i class="fa fa-external-link"></i>: Laboratory of the South Australian School of Mines and Industries (now University of South Australia Building);
 Original: South Australian GovernmentPhoto [<a rel="nofollow" href="http://data.history.sa.gov.au/sagpc/media/preview/9811?maxsize=1000" target="_blank">1</a><i class="fa fa-external-link"></i>]; 
 Object record: [<a rel="nofollow" href="http://data.history.sa.gov.au/sagpc/getitem/9811" target="_blank">2</a><i class="fa fa-external-link"></i>]; 
