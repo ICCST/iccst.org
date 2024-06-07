@@ -1,0 +1,8 @@
+/* FOOTER */
+
+.footer {
+    height: 220px;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #6C8EA9, #2B3843);
+    box-shadow: 4px 4px 5px 4px rgba(0, 0, 0, 0.5);
+}

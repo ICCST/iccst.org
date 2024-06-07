@@ -1,0 +1,93 @@
+/* HEADER */
+
+.header {
+    /* Background Image settings */
+    background-image: url('../images/ChemLabAlpha.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Settings for content */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    text-align: center;
+    background-color: rgba(111, 140, 240, 0.8);
+    height: 285px;
+}
+
+/* FLEX CONTAINER 1 */
+.overlay {
+
+    /* Settings for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    text-align: center;
+
+    /* General settings */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 285px;
+    background-color: rgb(75, 127, 172);
+    opacity: 0.45;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* FLEX CONTAINER 2 */
+.logo {
+    position: relative;
+    z-index: 1;
+    height: 5.5rem;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: rgba(231, 222, 200, 0.9);
+    border-radius: 10px;
+    box-shadow: 2px 4px 2px #000;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.logo:hover {
+    background-size: 100%;
+    background-image: linear-gradient(to right, #78756b, transparent);
+    border-right-style: none;
+    color: white;
+}
+
+/* FLEX CONTAINER 3 */
+.header-content {
+    width: 70%;
+    /* Ensures that content is above layer */
+    position: relative;
+    z-index: 1;
+}
+
+.header h1 {
+    margin: 0;
+    height: 3.2em;
+    position: relative;
+    z-index: 2;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(45deg, #FFD700, #FFB14E, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05); */
+    -webkit-text-stroke: 1px rgb(3, 3, 3);
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    /* Adjust font size as needed */
+}
