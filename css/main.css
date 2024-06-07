@@ -1,7 +1,52 @@
-.main {
-    margin: 10px;
+/* Main */
+
+.prepend {
+    text-align: left;
 }
 
 .content {
+    text-align: left;
+}
+
+/* AWESOME LINK STYLING */
+.link-icon {
+    font-size: 34px;
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.link-icon:hover {
+    color: #007BFF;
+}
+
+.link-icon i {
+    margin: 8px;
+}
+
+/* Styling of an image and description */
+.figure {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+}
+
+.figure>h4 {
     margin: 10px;
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+    border: 9px solid #000;
+    border-style: groove;
+}
+
+.figure figcaption {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
 }
