@@ -45,6 +45,13 @@ td {
   margin-left: 100px;
   margin-top: 30px; }
 
+.disabledLink {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
 .footer {
   position: fixed;
   bottom: 0px;
@@ -71,13 +78,21 @@ td {
     background-color: rgba(0,0,0,0.4); }
 
 .lightdeskContent {
+    display: inline-block;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
 }
 
-.lightdeskContent img {
+.lightdeskImage img {
     height: 70%;
     width: 70%;
     object-fit: contain;
+}
+
+.lightdeskCaption {
+    font-size: 10px;
 }
 
 .lightdeskCloseButton {
@@ -94,10 +109,32 @@ td {
     outline: 0;
     width: 80%;
     height: 80%;
-    overflow: hidden; }
+    overflow: hidden; 
+    text-align: center;
+}
+
+.lightdeskImage {
+    text-align: center;
+}
+
+.lightdeskNavNext {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 28px;
+}
+
+.lightdeskNavPrev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 28px;
+}
 
 .mediatitle {
-  font-size: 10px; }
+    font-size: 10px; 
+    text-align: left;
+}
 
 .opict {
   padding: 5px;

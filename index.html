@@ -9,64 +9,38 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- jQuery 3.6.3 - see messages/legal.html for copyright & licensing information -->
   <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="scripts/iccst.js"></script>
   <script>
-    /* add new content at the end of the list */
-    const pageNames = [ 'legal.html', 'sitemap.html', 'msg_20210122.html', 'msg_20220701.html', 'msg_20240108.html', 'current.html' ];
-    let currentPage = pageNames.length - 1;
-
-    function lightDesk(image, caption) {
-        document.getElementById('lightdeskContent').innerHTML="<img src='" + image + "' />"
-                + "<div class='mediatitle'>" + caption + "</div>";
-        document.getElementById('lightdesk').style.display="block";
-    }
-
-    function setPage(index, delta, title) {
-        if ((index >= 0) && (index < pageNames.length)) {
-            currentPage = index;
-        } 
-        if ((delta > -2) && (delta < 2)) {
-            currentPage = currentPage + delta;
-        }
-        if ((currentPage < 0) || (currentPage >= pageNames.length)) {
-            currentPage = 0;
-        }
-
-        $.get("messages/" + pageNames[currentPage], function (data, status) {
-            $("#CONTENT").html(data);
-        });
-        window.history.pushState(currentPage, "iccst.org", "?" + currentPage);
-    }
-
-    $(document).ready(function() {
-        let page = document.location.search;
-        if (page === "") {
-            page = pageNames.length - 1;
-        } else {
-            page = page.substring(1) - 0;
-        }
-        setPage(page, 0);
-    });
+    /* 
+     * Add new content at the end of the list!
+     */
+    const pageNames = [ 'legal.html', 'sitemap.html', 'msg_20210122.html', 'msg_20220701.html', 'msg_20230227.html', 'msg_20240607.html' ];
   </script>
 </head>
 <body bgcolor="#ffffff">
 <img src="images/ChemLab.png" class="headimg" /> 
 <div>
-  <a href="#" onclick="setPage(undefined, -1); return false;" title="Earlier">&lt;&lt;</a>
-  <a href="?0" onclick="setPage(pageNames.length - 1, 0); return false;">Home</a>
+  <a href="#" id="linkEarlier" onclick="setPage(undefined, -1); return false;" title="Earlier">&lt;&lt;</a>
+  <a href="" onclick="setPage(pageNames.length - 1, 0); return false;">Home</a>
   <a href="?2" onclick="setPage(1, 0); return false;">Site Map</a>
   <a href="?1" onclick="setPage(0, 0); return false;">Legal</a>
-  <a href="#" onclick="setPage(undefined, 1); return false;" title="Newer">&gt;&gt;</a>
+  <a href="#" id="linkNewer" onclick="setPage(undefined, 1); return false;" title="Newer">&gt;&gt;</a>
 </div>
 <div id="lightdesk" class="lightdesk">
   <div class="lightdeskFrame">
-    <span class="lightdeskCloseButton" onclick="document.getElementById('lightdesk').style.display='none'">×</span>
-    <div id="lightdeskContent" class="lightdeskContent">
+    <span class="lightdeskCloseButton" onclick="$('#lightdesk').css('display','none');"><i class="fa fa-window-close"></i></span>
+    <div class=lightdeskContent">
+      <div class="lightdeskNavPrev" onclick="lightDesk(0,-1);"><i class="fa fa-angle-left"></i></div>
+      <div class="lightdeskNavNext" onclick="lightDesk(0,1);"><i class="fa fa-angle-right"></i></div>
+       <div id="lightdeskImage" class="lightdeskImage"></div>
+       <div id="lightdeskCaption" class="lightdeskCaption"></div>
     </div>
   </div>
 </div>
 <div class="frame">
 <h1 class="iccst_h1">ICCST.org</h1>
 <div id="CONTENT"></div>
+<div id="pinnedContent"></div>
 <div class="spacer">&nbsp;</div>
 <div class="footer">
 <a href="?0" onclick="setPage(1, 0);">Legal information / Imprint</a><br/>
