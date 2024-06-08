@@ -2,6 +2,43 @@
  * Style Sheet
  * International Conferences on the Chemistry of Selenium and Tellurium
  */
+* {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*
+ * Actual styling
+ */
 body {
   font-family: Sans-serif; }
 
@@ -9,15 +46,30 @@ td {
   padding: 8px; }
 
 .iccst_date {
-  font-size: 10px;
+  font-size: 60%;
   font-style: italic; }
 
 .iccst_h1 {
   margin-bottom: 10px;
   margin-top: 10px;
-  font-size: 100px;
-  font-style: bold;
+  font-size: 600%;
+  font-weight: bold;
   color: #cc2; }
+
+@media only screen and (max-width: 768px) {
+  .iccst_h1 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-size: 300%;
+      font-weight: bold;
+      color: #cc2;
+  }
+}
+
+img {
+  max-width: 100%;
+  padding: 5px;
+}
 
 #img-link, #img-link img {
   text-decoration: none !important;
@@ -27,23 +79,26 @@ td {
   outline-width:0px;
   border-bottom: none; }
 
-.headimg { 
-  margin-top: -40px;
-  margin-bottom: -40px;
-  clip-path: inset(40px 0px 40px 0px); }
+.headimg {
+  margin-top: -3%;
+  margin-bottom: -4%;
+  clip-path: inset(12% 0px 16% 0px);
+  width: 100%
+}
 
 .indent {
-  margin-bottom: 30px;
-  margin-left: 100px; 
-  margin-top: 30px; }
+}
+
+@media only screen and (min-width: 768px) {
+  .indent {
+    margin-bottom: 30px;
+    margin-left: 8%;
+    margin-top: 30px; 
+  }
+}
 
 .inactive {
   color: #aaa; }
-
-.indent {
-  margin-bottom: 30px;
-  margin-left: 100px;
-  margin-top: 30px; }
 
 .disabledLink {
   pointer-events: none;
@@ -58,18 +113,18 @@ td {
   left: 0px;
   width: 100%;
   padding: 10px;
-  background-color: #ddd; 
+  background-color: #ddd;
   font-size: 10px; }
 
 .frame {
   margin: 20px; }
 
-.lightdesk { 
+.lightdesk {
     z-index: 3;
     display: none;
-    padding-top: 100px;
+    padding-top: 5%;
     position: fixed;
-    left: 0; 
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
@@ -92,7 +147,7 @@ td {
 }
 
 .lightdeskCaption {
-    font-size: 10px;
+    font-size: 80%;
 }
 
 .lightdeskCloseButton {
@@ -107,9 +162,9 @@ td {
     position: relative;
     padding: 30px;
     outline: 0;
-    width: 80%;
-    height: 80%;
-    overflow: hidden; 
+    width: 90%;
+    max-height: inherit;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -120,38 +175,29 @@ td {
 .lightdeskNavNext {
     position: absolute;
     top: 50%;
-    right: 20px;
-    font-size: 28px;
+    right: 2%;
+    font-size: 200%;
 }
 
 .lightdeskNavPrev {
     position: absolute;
     top: 50%;
-    left: 20px;
-    font-size: 28px;
+    left: 2%;
+    font-size: 200%;
 }
 
 .mediatitle {
-    font-size: 10px; 
+    font-size: 70%;
     text-align: left;
 }
 
 .spacer {
   margin-top: 400px; }
 
-.text {
-  width: 900px; }
+.text { }
 
 .textAlert {
   color: #dd0000;
   font-size: 200%;
 }
-
-.videobox {
-  position: relative; }
-
-.videoframe {
-  position: absolute;
-  top: -60px;
-  left: 500px; }
 
