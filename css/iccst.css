@@ -136,30 +136,16 @@ td {
     text-align: left;
 }
 
-.opict {
-  padding: 5px;
-  margin: 10px;
-  border-width: 7px;
-  border-style: solid;
-  border-color: #000;
-  float: left; }
-
-.oheading {
-  font-size: 40px;
-  font-style: bold;
-  margin-bottom: 0px; }
-
-.otext {
-  padding-left: 30px;
-  margin-bottom: 50px;
-  width: 800px;
-  height: 120px; }
-
 .spacer {
   margin-top: 400px; }
 
 .text {
   width: 900px; }
+
+.textAlert {
+  color: #dd0000;
+  font-size: 200%;
+}
 
 .videobox {
   position: relative; }
