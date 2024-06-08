@@ -2,6 +2,13 @@
  * Style Sheet
  * International Conferences on the Chemistry of Selenium and Tellurium
  */
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * Actual styling
+ */
 body {
   font-family: Sans-serif; }
 
@@ -9,15 +16,25 @@ td {
   padding: 8px; }
 
 .iccst_date {
-  font-size: 10px;
+  font-size: 60%;
   font-style: italic; }
 
 .iccst_h1 {
   margin-bottom: 10px;
   margin-top: 10px;
-  font-size: 100px;
-  font-style: bold;
+  font-size: 600%;
+  font-weight: bold;
   color: #cc2; }
+
+@media only screen and (max-width: 600px) {
+  .iccst_h1 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-size: 300%;
+      font-weight: bold;
+      color: #cc2;
+  }
+}
 
 #img-link, #img-link img {
   text-decoration: none !important;
@@ -28,9 +45,11 @@ td {
   border-bottom: none; }
 
 .headimg { 
-  margin-top: -40px;
-  margin-bottom: -40px;
-  clip-path: inset(40px 0px 40px 0px); }
+  margin-top: -3%;
+  margin-bottom: -4%;
+  clip-path: inset(12% 0px 16% 0px); 
+  width: 100%
+}
 
 .indent {
   margin-bottom: 30px;
@@ -67,7 +86,7 @@ td {
 .lightdesk { 
     z-index: 3;
     display: none;
-    padding-top: 100px;
+    padding-top: 5%;
     position: fixed;
     left: 0; 
     top: 0;
@@ -107,8 +126,8 @@ td {
     position: relative;
     padding: 30px;
     outline: 0;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    max-height: inherit;
     overflow: hidden; 
     text-align: center;
 }
@@ -120,15 +139,15 @@ td {
 .lightdeskNavNext {
     position: absolute;
     top: 50%;
-    right: 20px;
-    font-size: 28px;
+    right: 2%;
+    font-size: 200%;
 }
 
 .lightdeskNavPrev {
     position: absolute;
     top: 50%;
-    left: 20px;
-    font-size: 28px;
+    left: 2%;
+    font-size: 200%;
 }
 
 .mediatitle {
