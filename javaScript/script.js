@@ -34,7 +34,6 @@ function changePage() {
             // Add event listener for images
             addImageClickListeners();
 
-
         }
     }
     xhr.send();
@@ -73,8 +72,8 @@ function openImageInOverlay(img) {
     overlay.appendChild(nextBtn);
 
     let imageEl = document.createElement('img')
-    imageEl.src = img.src;
-    imageEl.alt = img.alt;
+    // imageEl.src = img.src;
+    // imageEl.alt = img.alt;
     overlay.appendChild(imageEl)
 
     //Buttons functionallity 
@@ -85,8 +84,10 @@ function openImageInOverlay(img) {
 
     //Slider functionallity
     let images = document.querySelectorAll('.overlay>img')
-    console.log(images.length)
-    let currentIndex = 0;
+
+    //Setting a correct index form preview pictures array 
+    let imagesArray = document.querySelectorAll('figure>img')
+    let currentIndex = Array.from(imagesArray).indexOf(img) - 1
 
     // Method show Images
     function showImage(index) {
