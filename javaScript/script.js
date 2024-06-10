@@ -24,7 +24,7 @@ function changePage() {
 
     // Load of page content
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "./html/page1.html", true);
+    xhr.open("GET", "./html/home.html", true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let pageContent = xhr.responseText;

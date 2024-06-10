@@ -10,7 +10,7 @@
 
 /* AWESOME LINK STYLING */
 .link-icon {
-    font-size: 34px;
+    font-size: 28px;
     color: #000;
     text-decoration: none;
     display: inline-flex;
@@ -32,9 +32,7 @@
     text-align: left;
 }
 
-.figure>h4 {
-    margin: 10px;
-}
+
 
 .figure img {
     max-width: 100%;
@@ -50,4 +48,12 @@
     font-size: 18px;
     font-style: italic;
     color: #555;
+}
+
+h2 {
+    margin: 20px;
+}
+
+h4 {
+    margin: 0;
 }
