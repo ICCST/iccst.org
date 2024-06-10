@@ -34,6 +34,7 @@ function changePage() {
             // Add event listener for images
             addImageClickListeners();
 
+
         }
     }
     xhr.send();
@@ -50,31 +51,53 @@ function addImageClickListeners() {
 }
 
 function openImageInOverlay(img) {
-    // Create overlay if it doesn't exist
+
+    // generation of overlay view
     let overlay = document.querySelector('.overlay');
-    if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        document.body.appendChild(overlay);
+    document.body.appendChild(overlay);
 
-        let closeBtn = document.createElement('span');
-        closeBtn.classList.add('close');
-        closeBtn.innerHTML = '&times;';
-        overlay.appendChild(closeBtn);
+    let closeBtn = document.querySelector('.close');
+    overlay.appendChild(closeBtn);
 
-        closeBtn.onclick = () => {
-            overlay.style.display = 'none';
-        };
+    let prevBtn = document.querySelector('.prev');
+    overlay.appendChild(prevBtn);
+
+    let nextBtn = document.querySelector('.next');
+    overlay.appendChild(nextBtn)
+
+    let imageEl = document.createElement('img')
+    imageEl.src = img.src;
+    imageEl.alt = img.alt;
+    overlay.appendChild(imageEl)
+
+    //Buttons functionallity 
+    closeBtn.onclick = () => { overlay.style.display = 'none'; };
+    prevBtn.onclick = () => showImage(currentIndex - 1);
+    nextBtn.onclick = () => showImage(currentIndex + 1);
+
+
+    //Slider functionallity
+    let images = document.querySelectorAll('.overlay>img')
+    console.log(images.length)
+    let currentIndex = 0;
+
+    // Method show Images
+    function showImage(index) {
+        if (index >= images.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = images.length - 1;
+        } else {
+            currentIndex = index;
+        }
+
+        imageEl.src = images[currentIndex].src
+        imageEl.alt = images[currentIndex].alt
     }
 
-    // Display the overlay with the clicked image
-    overlay.innerHTML = `<span class="close">&times;</span><img src="${img.src}" alt="${img.alt}">`;
-    overlay.style.display = 'flex';
+    showImage(currentIndex);
 
-    // Add close event
-    overlay.querySelector('.close').onclick = () => {
-        overlay.style.display = 'none';
-    };
+    overlay.style.display = 'flex';
 }
 
 
