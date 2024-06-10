@@ -52,18 +52,25 @@ function addImageClickListeners() {
 
 function openImageInOverlay(img) {
 
-    // generation of overlay view
-    let overlay = document.querySelector('.overlay');
+    // div class="overlay" creation
+    let overlay = document.createElement('div');
+    overlay.classList.add('overlay');
     document.body.appendChild(overlay);
 
-    let closeBtn = document.querySelector('.close');
+    let closeBtn = document.createElement('span');
+    closeBtn.classList.add('close');
+    closeBtn.innerHTML = '&times;';
     overlay.appendChild(closeBtn);
 
-    let prevBtn = document.querySelector('.prev');
+    let prevBtn = document.createElement('span');
+    prevBtn.classList.add('prev');
+    prevBtn.innerHTML = '&#10094;';
     overlay.appendChild(prevBtn);
 
-    let nextBtn = document.querySelector('.next');
-    overlay.appendChild(nextBtn)
+    let nextBtn = document.createElement('span');
+    nextBtn.classList.add('next');
+    nextBtn.innerHTML = '&#10095;';
+    overlay.appendChild(nextBtn);
 
     let imageEl = document.createElement('img')
     imageEl.src = img.src;
