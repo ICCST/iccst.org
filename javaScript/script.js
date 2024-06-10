@@ -42,7 +42,7 @@ btn1.onclick = changePage;
 
 function addImageClickListeners() {
     //Event delegation fo dynamic added pages
-    document.querySelector('.content').addEventListener('click', (event) => {
+    document.querySelector('.slider').addEventListener('click', (event) => {
         if (event.target.tagName === 'IMG') {
             openImageInOverlay(event.target);
         }
