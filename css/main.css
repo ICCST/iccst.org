@@ -39,8 +39,9 @@
 .figure img {
     max-width: 100%;
     height: auto;
-    border: 9px solid #000;
+    border: 9px solid #b8b0b0;
     border-style: groove;
+    cursor: pointer;
 }
 
 .figure figcaption {
