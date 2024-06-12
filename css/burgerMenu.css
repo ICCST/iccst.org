@@ -1,0 +1,97 @@
+.burgerMenu {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 47%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    box-shadow: 2px 4px 2px #000;
+    border: none;
+    cursor: pointer;
+}
+
+.burgerMenu-line:focus {
+    outline: none;
+}
+
+.burgerMenu span {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 9px;
+    right: 9px;
+    height: 4px;
+    background: #fff;
+}
+
+.burgerMenu span::before,
+.burgerMenu span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    content: "";
+}
+
+.burgerMenu span::before {
+    top: -10px;
+}
+
+.burgerMenu span::after {
+    bottom: -10px;
+}
+
+.burgerMenu-line {
+    background: #c1cbec;
+}
+
+.burgerMenu-line span {
+    transition: background 0s 0.3s;
+}
+
+/* Animation from 3 lines to cross */
+
+/* 1 step duration and delay */
+.burgerMenu-line span::before,
+.burgerMenu-line span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+/* 2nd step */
+.burgerMenu-line span::before {
+    transition-property: top, transform;
+}
+
+.burgerMenu-line span::after {
+    transition-property: bottom, transform;
+}
+
+.burgerMenu-line.is-active {
+    background: red;
+}
+
+.burgerMenu-line.is-active span {
+    background: none;
+}
+
+.burgerMenu-line.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burgerMenu-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.burgerMenu-line.is-active span::before,
+.burgerMenu-line.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}

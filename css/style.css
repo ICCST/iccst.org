@@ -7,7 +7,6 @@ html {
     padding: 0;
     height: 100%;
     background-color: #f0f0f0;
-    /* Light gray background for contrast */
     font-family: Arial, sans-serif;
 }
 
@@ -15,19 +14,13 @@ a {
     text-decoration: none;
 }
 
+/* GRID CONTAINER */
 .header {
-
-    /* Grid Position */
     grid-area: header;
-
-    /* General settings */
     margin: 0;
-
-
 }
 
 .navigation {
-
     grid-area: menu;
     margin: 0;
     padding: 0;
@@ -38,14 +31,13 @@ a {
     grid-area: main;
     margin: 10px;
     padding: 10px;
-    background-color: f2f2f2;
+    background-color: #f2f2f2;
 }
 
 .footer {
     grid-area: footer;
     margin: 0;
     padding: 0;
-    background-color: yellowgreen;
 }
 
 .grid-container {
@@ -64,4 +56,14 @@ a {
     text-align: center;
     padding: 0;
     font-size: 30px;
+}
+
+/* End of Grid Container */
+
+/* MEDIA QUERY for SMALL SCREENS BELOW 768px */
+@media (max-width: 768px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

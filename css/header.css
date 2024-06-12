@@ -7,43 +7,19 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Settings for content */
+    /* Settings for flex container */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: goldenrod;
-    text-align: center;
+    align-content: center;
+
+    /* Genreal settings */
     background-color: rgba(111, 140, 240, 0.8);
-    height: 285px;
 }
 
 /* FLEX CONTAINER 1 */
-.overlay {
-
-    /* Settings for content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: goldenrod;
-    text-align: center;
-
-    /* General settings */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 285px;
-    background-color: rgb(75, 127, 172);
-    opacity: 0.45;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* FLEX CONTAINER 2 */
 .logo {
-    position: relative;
-    z-index: 1;
     height: 5.5rem;
     margin-left: 10px;
     padding: 10px 20px;
@@ -57,23 +33,18 @@
 .logo:hover {
     background-size: 100%;
     background-image: linear-gradient(to right, #78756b, transparent);
-    border-right-style: none;
     color: white;
+    transform: translateY(3px);
 }
 
-/* FLEX CONTAINER 3 */
+/* FLEX CONTAINER 2 */
 .header-content {
     width: 70%;
-    /* Ensures that content is above layer */
-    position: relative;
-    z-index: 1;
 }
 
 .header h1 {
     margin: 0;
     height: 3.2em;
-    position: relative;
-    z-index: 2;
     font-size: 2.5em;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -82,12 +53,125 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05); */
     -webkit-text-stroke: 1px rgb(3, 3, 3);
 }
 
-.header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-    /* Adjust font size as needed */
+/* BURGER MENU */
+
+/* Button and Text */
+.burger-menu {
+    display: none;
+}
+
+/* Opening List with menus */
+.menuList {
+    display: none;
+}
+
+
+
+/* MEDIA QUERY================================ */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        height: auto;
+        -webkit-text-stroke: 0.5px rgb(3, 3, 3);
+    }
+
+    /* Flex-container 1 */
+    .logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+        height: 4rem;
+        padding: 10px;
+    }
+
+    /* Flex-container 2 */
+    .header-content {
+        margin-bottom: 10px;
+        border-top: 1px solid goldenrod;
+        width: 100%;
+    }
+
+    /* BURGER MENU START*/
+
+    /* Button */
+    .burger-menu {
+        padding: 10px;
+        border-top: 1px solid goldenrod;
+        width: 90%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        display: none;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        width: 100%;
+        background-color: #e2eaf0;
+        overflow: auto;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
+        transition: max-height 0.3s ease-in-out;
+        padding-bottom: 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .menuList.active {
+        display: block;
+        min-height: 300px;
+    }
+
+    /* MENU LIST BUTTONS */
+    .navMenubtn {
+        margin: 5px 0;
+        width: 90%;
+        height: 4.375rem;
+        border-radius: 0.9375rem;
+        border: 4px solid rgba(60, 82, 101, 0.75);
+        background: #6C8EA9;
+        box-shadow: 5px 7px 4px 2px rgba(60, 82, 101, 0.53);
+    }
+
+    /* MENU BUTON TEXT */
+    .navMenubtnText {
+        -webkit-text-stroke: 1.5px rgba(6, 4, 16, 0.8);
+        color: #F6F4DA;
+        text-shadow: 0px 4px 4px #000;
+        font-family: Macondo Swash Caps;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /* BURGER MENU END */
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 3rem;
+        padding: 5px;
+    }
+
+    .logo:hover {
+        transform: translateY(3px);
+    }
 }

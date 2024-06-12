@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/burgerMenu.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -21,23 +22,57 @@
 
         <!-- HEADER -->
         <header class="header">
-            <!-- flex container 1 -->
-            <div class="overlay"> </div>
 
-            <!-- flex container 2 -->
+            <!-- flex container 1 -->
             <div class="logo">
                 <h1 class="btn"><a href="iccst2025.html">ICCST.org</a></h1>
             </div>
 
-            <!-- flex container 3 -->
+            <!-- flex container 2 -->
             <div class="header-content">
                 <h1>16th International Conference on the Chemistry of Selenium and Tellurium (ICCST-16)</h1>
+            </div>
+
+
+            <!-- BURGER MENU -->
+            <div class="burger-menu">
+                <h1>Menu</h1>
+
+                <!-- B_MENU RECTANGLE WITH ANIMATION (burgerMenu.css) -->
+                <button class="burgerMenu burgerMenu-line brgOpen" onclick="toggleMenu()">
+                    <span>Menu</span>
+                </button>
+            </div>
+
+            <!-- THE MENU YELLOW BUTTONS -->
+            <div class="menuList">
+                <button class="navMenubtn bg1" onclick="toggleButton(event)">
+                    <a href="" class="navMenubtnText">Home</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="aktuelles.html" class="navMenubtnText">Aktuelles</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="kurse.html" class="navMenubtnText">Kurse</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="studio.html" class="navMenubtnText">Studio</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="ueberMich.html" class="navMenubtnText">Über mich</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="preise.html" class="navMenubtnText">Preise</a>
+                </button>
+                <button class="navMenubtn">
+                    <a href="kontakt.html" class="navMenubtnText">Kontakt</a>
+                </button>
             </div>
         </header>
 
         <!-- NAVIGATION -->
         <nav class="navigation">
-            <ul>
+            <ul class="groupNav">
                 <li class="button btn1"><a href="http://">Home</a></li>
                 <li class="button btn2"><a href="http://">Introduction</a></li>
                 <li class="button btn3"><a href="http://">News</a></li>
@@ -53,7 +88,9 @@
                 <li class="button"><a href="http://">Sponsors / Supports</a></li>
                 <li class="button"><a href="http://">Contact</a></li>
             </ul>
+
         </nav>
+        <!-- END OF NAVIGATION -->
 
         <!-- MAIN -->
         <main class="main">
@@ -81,6 +118,9 @@
     </div>
     <script src="./javaScript/script.js"></script>
     <script src="./javaScript/introduction.js"></script>
+    <script src="./javaScript/burger.js"></script>
+    <script src="./javaScript/burgerMenuLoadPage.js"></script>
+
 </body>
 
 </html>
