@@ -3,7 +3,6 @@ function toggleButton(event) {
     //prevent the default anchor behavior
     event.preventDefault();
 
-    console.log("IAM IN")
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "./html/home.html", true);
     xhr.onreadystatechange = () => {

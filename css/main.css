@@ -73,3 +73,46 @@ p {
     margin: 1em 0;
     line-height: 1.2em;
 }
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+
+    .prepend>h1,
+    .content>h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .prepend>p,
+    .content>p {
+        border-top: 1px solid #4d4747;
+        font-size: 1.5rem;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .content>h2 {
+        padding-top: 15px;
+        font-size: 1.9rem;
+        border-top: 1px solid #4d4747;
+    }
+
+    .figure>h4 {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    .link-icon {
+        font-size: 1.4rem;
+    }
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        justify-content: center;
+        border-top: 1px solid #4d4747;
+        padding: 10px 0;
+    }
+}

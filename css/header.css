@@ -18,6 +18,7 @@
     background-color: rgba(111, 140, 240, 0.8);
 }
 
+
 /* FLEX CONTAINER 1 */
 .logo {
     height: 5.5rem;
@@ -100,6 +101,21 @@
     }
 
     /* BURGER MENU START*/
+    .burgerMenu {
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 47%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 48px;
+        height: 48px;
+        font-size: 0;
+        box-shadow: 2px 4px 2px #000;
+        border: none;
+        cursor: pointer;
+    }
 
     /* Button */
     .burger-menu {
@@ -171,7 +187,92 @@
         padding: 5px;
     }
 
-    .logo:hover {
-        transform: translateY(3px);
+}
+
+@media screen and (max-width: 810px) and (max-height: 1080px) {
+
+    /* LOGO*/
+    .logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+        height: 3rem;
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    /* HEADER */
+    .header h1 {
+        font-size: auto;
+        height: auto;
+    }
+
+    /* TITLE */
+    .prepend>h1 {
+        font-size: auto;
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 428px) and (max-height: 926px) {
+
+    .burgerMenu {
+        top: 36%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 402px;
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+
+    .burgerMenu {
+        top: 38%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 402px;
+    }
+}
+
+@media screen and (max-width: 390px) and (max-height: 844px) {
+
+    .burgerMenu {
+        top: 40%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 402px;
+    }
+}
+
+
+@media screen and (max-width: 375px) and (max-height: 812px) {
+
+    .burgerMenu {
+        top: 47%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 447px;
+    }
+}
+
+
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+
+    .burgerMenu {
+        top: 57%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 447px;
     }
 }
