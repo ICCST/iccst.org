@@ -131,8 +131,8 @@
         display: none;
         position: absolute;
         top: 55%;
-        left: 0;
-        width: 100%;
+        left: 5;
+        width: 95%;
         background-color: #e2eaf0;
         overflow: auto;
         box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
@@ -189,64 +189,95 @@
 
 }
 
-@media screen and (max-width: 810px) and (max-height: 1080px) {
+@media screen and (max-width: 810px) and (max-height: 1280px) {
 
     /* LOGO*/
     .logo {
-        margin-left: 0;
-        margin-bottom: 20px;
-        height: 3rem;
+        margin: 3rem;
+        height: auto;
         padding: 10px;
-        margin-right: 10px;
     }
 
     /* HEADER */
     .header h1 {
-        font-size: auto;
+        font-size: 2.5rem;
         height: auto;
     }
 
-    /* TITLE */
-    .prepend>h1 {
-        font-size: auto;
-        margin: 10px 0;
-    }
 }
 
-
 @media screen and (max-width: 428px) and (max-height: 926px) {
+    .logo {
+        margin: 10px;
+    }
 
     .burgerMenu {
-        top: 36%;
+        top: 29%;
     }
 
     /* MENU LIST BACKGROUND */
     .menuList {
-        top: 402px;
+        top: 335px;
     }
 }
 
 @media screen and (max-width: 414px) and (max-height: 896px) {
 
     .burgerMenu {
-        top: 38%;
+        top: 30%;
     }
 
     /* MENU LIST BACKGROUND */
     .menuList {
-        top: 402px;
+        top: 335px;
+    }
+}
+
+@media screen and (max-width: 412px) and (max-height: 915px) {
+
+    .burgerMenu {
+        top: 30%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 335px;
+    }
+}
+
+@media screen and (max-width: 412px) and (max-height: 883px) {
+
+    .burgerMenu {
+        top: 31%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 335px;
     }
 }
 
 @media screen and (max-width: 390px) and (max-height: 844px) {
 
     .burgerMenu {
-        top: 40%;
+        top: 37%;
     }
 
     /* MENU LIST BACKGROUND */
     .menuList {
-        top: 402px;
+        top: 375px;
+    }
+}
+
+@media screen and (max-width: 384px) and (max-height: 854px) {
+
+    .burgerMenu {
+        top: 36.5%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 375px;
     }
 }
 
@@ -254,12 +285,12 @@
 @media screen and (max-width: 375px) and (max-height: 812px) {
 
     .burgerMenu {
-        top: 47%;
+        top: 38%;
     }
 
     /* MENU LIST BACKGROUND */
     .menuList {
-        top: 447px;
+        top: 374px;
     }
 }
 
@@ -268,11 +299,35 @@
 @media screen and (max-width: 375px) and (max-height: 667px) {
 
     .burgerMenu {
-        top: 57%;
+        top: 47%;
     }
 
     /* MENU LIST BACKGROUND */
     .menuList {
-        top: 447px;
+        top: 375px;
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 800px) {
+
+    .burgerMenu {
+        top: 39%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 375px;
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 760px) {
+
+    .burgerMenu {
+        top: 41%;
+    }
+
+    /* MENU LIST BACKGROUND */
+    .menuList {
+        top: 375px;
     }
 }
