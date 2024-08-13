@@ -1,0 +1,15 @@
+<div id="WGA_CONTENT">
+</div>
+Some actions are subject to rate limitation.
+<div id="WGA_ADMIN">
+<a href="#" onclick="wgaSetSecret(); return false;">Board members please authenticate here</a>
+</div>
+<script>
+    $().ready(function() {
+        $.get(wgaURL + "?action=" + wgaAction, function(data, status) {
+            if (status === "success") {
+                $("#WGA_CONTENT").html(data);
+            }
+        });
+    });
+</script>

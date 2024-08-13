@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/burgerMenu.css">
     <script src="/scripts/jquery-3.6.3.min.js"></script>
+    <script src="scripts/iccst16.js"></script>
+    <script src="scripts/wga.js"></script>
 </head>
 
 <body>
@@ -36,9 +38,6 @@
 
             <!-- BURGER MENU -->
             <div class="burger-menu">
-<!--
-                <h1>Menu</h1>
--->
                 <!-- B_MENU RECTANGLE WITH ANIMATION (burgerMenu.css) -->
                 <button class="burgerMenu burgerMenu-line" onclick="toggleMenu()">
                     <span>Menu</span>
@@ -65,11 +64,11 @@
         <!-- NAVIGATION -->
         <nav class="navigation">
             <ul class="groupNav">
-                <li class="button btn1"><a href="http://">Home</a></li>
-                <li class="button btn2"><a href="http://">Introduction</a></li>
-                <li class="button btn3"><a href="http://">News</a></li>
-                <li class="button"><a href="http://">Transportation</a></li>
-                <li class="button"><a href="http://">Committee</a></li>
+                <li class="button btnHome" onclick="loadPage(event, 'html/home.html', '.btnHome');">Home</li>
+                <li class="button btnSpecial" onclick="loadPage(event, 'html/specialIssue.html', '.btnSpecial');">Special Issue</li>
+                <li class="button btnHotels" onclick="loadPage(event, 'html/hotels.html', '.btnHotels');">Hotels</li>
+                <li class="button btnAward" onclick="loadPage(event, 'html/award.html', '.btnAward');">Award</li>
+                <li class="button btnCommittee" onclick="loadPage(event, 'html/committee.html', '.btnCommittee');">Committee</li>
                 <li class="button"><a href="http://">International Advisory
                         Board</a></li>
                 <li class="button"><a href="http://">Program</a></li>
@@ -86,7 +85,7 @@
 
         <!-- MAIN -->
         <main class="main">
-
+<!--
             <div class="prepend">
 
                 <h1>16th ICCST to convene in Halle (Saale), Germany </h1>
@@ -98,7 +97,8 @@
                     team
                     at the Leibniz Institute of Plant Biochemistry. </p>
             </div>
-            <div class="content"></div>
+-->
+            <div id="CONTENT" class="content"></div>
 
 
         </main>
@@ -108,11 +108,6 @@
             <h2></h2>
         </footer>
     </div>
-    <script src="./javaScript/script.js"></script>
-    <script src="./javaScript/introduction.js"></script>
-    <script src="./javaScript/burger.js"></script>
-    <script src="./javaScript/burgerMenuLoadPage.js"></script>
-
 </body>
 
 </html>
