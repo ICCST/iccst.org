@@ -56,6 +56,11 @@ td {
   font-weight: bold;
   color: #cc2; }
 
+.iccst_subheading {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 768px) {
   .iccst_h1 {
       margin-bottom: 10px;
