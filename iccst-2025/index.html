@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/burgerMenu.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <script src="/scripts/jquery-3.6.3.min.js"></script>
     <script src="scripts/iccst16.js"></script>
     <script src="scripts/wga.js"></script>
@@ -26,9 +27,7 @@
         <header class="header">
 
             <!-- flex container 1 -->
-            <div class="logo">
-                <h1 class="btn"><a href="/index.html">ICCST.org</a></h1>
-            </div>
+            <!-- link to the main page -->
 
             <!-- flex container 2 -->
             <div class="header-content">
@@ -43,69 +42,37 @@
                     <span>Menu</span>
                 </button>
             </div>
-
-            <!-- THE MENU YELLOW BUTTONS -->
-            <div class="menuList">
-                <button class="navMenubtn bg1" onclick="toggleButton(event)">
-                    <a href="" class="navMenubtnText">Home</a>
-                </button>
-                <button class="navMenubtn bg1" onclick="toggleButton(event)">
-                    <a href="" class="navMenubtnText">Introduction</a>
-                </button>
-                <button class="navMenubtn bg1" onclick="toggleButton(event)">
-                    <a href="" class="navMenubtnText">News</a>
-                </button>
-                <button class="navMenubtn bg1" onclick="toggleButton(event)">
-                    <a href="" class="navMenubtnText">Transportation</a>
-                </button>
-            </div>
         </header>
 
         <!-- NAVIGATION -->
-        <nav class="navigation">
-            <ul class="groupNav">
-                <li class="button btnHome" onclick="loadPage(event, 'html/home.html', '.btnHome');">Home</li>
-                <li class="button btnSpecial" onclick="loadPage(event, 'html/specialIssue.html', '.btnSpecial');">Special Issue</li>
-                <li class="button btnHotels" onclick="loadPage(event, 'html/hotels.html', '.btnHotels');">Hotels</li>
-                <li class="button btnAward" onclick="loadPage(event, 'html/award.html', '.btnAward');">Award</li>
-                <li class="button btnCommittee" onclick="loadPage(event, 'html/committee.html', '.btnCommittee');">Committee</li>
-                <li class="button"><a href="http://">International Advisory
-                        Board</a></li>
-                <li class="button"><a href="http://">Program</a></li>
-                <li class="button"><a href="http://">Confirmed Speakers</a></li>
-                <li class="button"><a href="http://">Venue</a></li>
-                <li class="button"><a href="http://">Registration</a></li>
-                <li class="button"><a href="http://">Abstract Submission</a></li>
-                <li class="button"><a href="http://">Sponsors / Supports</a></li>
-                <li class="button"><a href="http://">Contact</a></li>
-            </ul>
-
+        <nav class="navigation navContainer navResponsive">
+            <div class="navButton btnHome" onclick="loadPage(event, 'html/home.html', '.btnHome');">Home</div>
+            <div class="navButton btnVenue" onclick="loadPage(event, 'html/venue.html', '.btnVenue');">Venue</div>
+            <div class="navButton btnSpecial" onclick="loadPage(event, 'html/specialIssue.html', '.btnSpecial');">Special Issue</div>
+            <div class="navButton btnHotels" onclick="loadPage(event, 'html/hotels.html', '.btnHotels');">Hotels</div>
+            <div class="navButton btnAward" onclick="loadPage(event, 'html/award.html', '.btnAward');">Award</div>
+            <div class="navButton btnCommittee" onclick="loadPage(event, 'html/committee.html', '.btnCommittee');">Committee</div>
+            <div class="navButton">International Advisory Board</div>
+            <div class="navButton">Program</div>
+            <div class="navButton">Confirmed Speakers</div>
+            <div class="navButton">Registration</div>
+            <div class="navButton">Abstract Submission</div>
+            <div class="navButton">Sponsors / Supports</div>
+            <div class="navButton">Contact</div>
         </nav>
         <!-- END OF NAVIGATION -->
 
         <!-- MAIN -->
         <main class="main">
-<!--
-            <div class="prepend">
-
-                <h1>16th ICCST to convene in Halle (Saale), Germany </h1>
-                <p>The members of the International Advisory Board are pleased to announce the event of the 16th
-                    ICCST
-                    in
-                    Halle (Saale), Germany. The local organization will be carried out by Professor Wessjohann and
-                    his
-                    team
-                    at the Leibniz Institute of Plant Biochemistry. </p>
+            <div id="CONTENT" class="content">
+                This page requires JavaScript.
             </div>
--->
-            <div id="CONTENT" class="content"></div>
-
-
         </main>
 
         <!-- FOOTER -->
         <footer class="footer">
-            <h2></h2>
+            <p class="footerText">The 16<sup>th</sup> International Conference on the Chemistry of Selenium and Tellurium is the latest event in the <a href="https://www.iccst.org" class="footerLink">ICCST</a> conference series.</p>
+            <a href="https://www.iccst.org/?0" class="footerLink">Legal information.</a>
         </footer>
     </div>
 </body>

@@ -67,31 +67,19 @@ function openImageInOverlay(img) {
 }
 
 
+/*
+ * Page loading & menu operation
+ */
 function toggleMenu() {
-    const navMenu = document.querySelector('.menuList')
-    navMenu.classList.toggle('active')
+    $('.navContainer').toggleClass('navResponsive');
 }
 
-/*
-// Animation for burger menu
-document.querySelector('.burgerMenu').addEventListener('click', function (e) {
-    e.preventDefault();
-    this.classList.toggle('is-active')
-})
-*/
-
-// Buttons functionallity
 function toggleButton(event) {
     //prevent the default anchor behavior
     event.preventDefault();
 
     // activation of burger menu
-    const navMenu = document.querySelector('.menuList');
-    navMenu.classList.toggle('active');
-
-    // Animation for burger menu
-    const burgerButton = document.querySelector('.burgerMenu');
-    burgerButton.classList.toggle('is-active');
+    $('.navContainer').addClass('navResponsive');
 }
 
 function loadPage(event, page, btnClass) {
@@ -102,3 +90,11 @@ function loadPage(event, page, btnClass) {
         }
     });
 }
+
+$().ready(function() {
+    $.get("html/home.html", function(data, status) {
+        if (status === "success") {
+            $("#CONTENT").html(data);
+        }
+    });
+});

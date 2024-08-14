@@ -22,12 +22,13 @@ a {
         'header header header header header header'
         'navigation main main main main main'
         'footer footer footer footer footer footer';
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 0;
     background-color: #2196F3;
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .header {
@@ -40,13 +41,15 @@ a {
     margin: 0;
     padding: 0;
     background-color: aqua;
+    width: max-content;
 }
 
 .main {
-    grid-area: main;
+    grid-area: 2 / 2 / 2 / 6;
     margin: 10px;
     padding: 10px;
     background-color: #f2f2f2;
+    width: 80%;
 }
 
 .footer {
