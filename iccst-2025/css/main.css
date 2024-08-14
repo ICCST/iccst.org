@@ -24,6 +24,10 @@
     margin: 8px;
 }
 
+img {
+    max-width: 100%
+}
+
 /* Styling of an image and description */
 .figure {
     display: inline-block;
