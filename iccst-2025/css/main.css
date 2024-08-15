@@ -7,23 +7,6 @@
     text-align: left;
 }
 
-/* AWESOME LINK STYLING */
-.link-icon {
-    font-size: 28px;
-    color: #000;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-}
-
-.link-icon:hover {
-    color: #007BFF;
-}
-
-.link-icon i {
-    margin: 8px;
-}
-
 img {
     max-width: 100%
 }
@@ -88,24 +71,19 @@ p {
     .prepend>p,
     .content>p {
         border-top: 1px solid #4d4747;
-        font-size: 1.5rem;
         padding: 10px 0;
         margin: 0;
     }
 
     .content>h2 {
         padding-top: 15px;
-        font-size: 1.9rem;
+        /*font-size: 1.9rem;*/
         border-top: 1px solid #4d4747;
     }
 
     .figure>h4 {
         font-size: 1.5rem;
         padding-top: 10px;
-    }
-
-    .link-icon {
-        font-size: 1.4rem;
     }
 
     .figure {

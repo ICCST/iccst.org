@@ -67,4 +67,8 @@ a {
         display: flex;
         flex-direction: column;
     }
+
+    .main {
+        width: 90%;
+    }
 }
