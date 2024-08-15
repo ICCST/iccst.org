@@ -1,0 +1,52 @@
+/* NAVIGATION */
+
+/* BUTTONS STYLING */
+
+.navigation {
+    background: linear-gradient(to bottom, #6C8EA9, #2B3843);
+    box-shadow: 4px 4px 5px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
+    height: auto;
+}
+
+.navResponsive {
+    display: block;
+}
+
+.navButton {
+    margin: 10px;
+    width: 240px;
+    height: 65px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    line-height: 65px;
+    text-align: center;
+}
+
+.button:hover {
+    background-size: 100%;
+    /* background-image: linear-gradient(to right, #E7DEC8, #E7DEC8); */
+    background-image: linear-gradient(to right, #406582, transparent);
+    background-image: linear-gradient(to right, #99aaaa, transparent);
+    border-right-style: none;
+    color: white;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 810px) and (max-height: 1280px) {
+    .button {
+        font-size: 1.5rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navResponsive {
+        display: none;
+    }
+}
