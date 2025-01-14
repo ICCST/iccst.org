@@ -57,6 +57,61 @@ p {
     line-height: 1.2em;
 }
 
+/*
+ * appearance of special parts
+ */
+
+/* program */
+
+.programTable {
+    border: 0px;
+    border-spacing: 10px;
+    text-align: center;
+}
+
+.programCell {
+    padding: 1.4em;
+}
+
+.programList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.programLegend {
+    font-size: 80%;
+    padding: 0.8em;
+}
+
+.programLegend li {
+    margin: 10px;
+}
+
+.programEvening {
+    height: 3em;
+}
+
+.programRow {
+    height: 8em;
+}
+
+.programRed {
+    background-color: #f0cccc;
+}
+
+.programGreen {
+    background-color: #ccf0cc;
+}
+
+.programBlue {
+    background-color: #b8d0f0;
+}
+
+.programWhite {
+    background-color: #ffffff;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 810px) and (max-height: 1280px) {
