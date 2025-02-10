@@ -30,38 +30,37 @@ function openImageInOverlay(img) {
     overlay.appendChild(nextBtn);
 
     let imageEl = document.createElement('img')
-    // imageEl.src = img.src;
-    // imageEl.alt = img.alt;
     overlay.appendChild(imageEl)
 
-    //Buttons functionallity 
+    //Buttons functionallity
     closeBtn.onclick = () => { overlay.style.display = 'none'; };
-    prevBtn.onclick = () => showImage(currentIndex - 1);
-    nextBtn.onclick = () => showImage(currentIndex + 1);
+    prevBtn.onclick = () => showImage(currentIndex, - 1);
+    nextBtn.onclick = () => showImage(currentIndex, 1);
 
 
     //Slider functionallity
-    let images = document.querySelectorAll('.overlay>img')
+    let images = document.querySelectorAll('.overlay>img');
 
-    //Setting a correct index form preview pictures array 
-    let imagesArray = document.querySelectorAll('figure>img')
-    let currentIndex = Array.from(imagesArray).indexOf(img) - 1
+    //Setting a correct index form preview pictures array
+    let imagesArray = document.querySelectorAll('figure>img');
+    let currentIndex = Array.from(imagesArray).indexOf(img);
 
     // Method show Images
-    function showImage(index) {
-        if (index >= images.length) {
+    function showImage(index, delta) {
+        index = index + delta;
+        if (index >= imagesArray.length) {
             currentIndex = 0;
         } else if (index < 0) {
-            currentIndex = images.length - 1;
+            currentIndex = imagesArray.length - 1;
         } else {
             currentIndex = index;
         }
 
-        imageEl.src = images[currentIndex].src
-        imageEl.alt = images[currentIndex].alt
+        imageEl.src = imagesArray[currentIndex].src.replace("preview_", "");
+        imageEl.alt = imagesArray[currentIndex].alt
     }
 
-    showImage(currentIndex);
+    showImage(currentIndex, 0);
 
     overlay.style.display = 'flex';
 }
