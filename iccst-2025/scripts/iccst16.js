@@ -91,9 +91,23 @@ function loadPage(event, page, btnClass) {
 }
 
 $().ready(function() {
-    $.get("html/home.html", function(data, status) {
+    let page = document.location.search;
+    window.history.replaceState({path: "/iccst-2025/"}, "", "/iccst-2025/");
+    if ((page.length < 2) || (!  /^[0-9A-Za-z_]+$/.test(page.substring(1)))) {
+        page = "html/home.html";
+    } else {
+        page = "html/" + page.substring(1) + ".html";
+    }
+    $.get(page, function(data, status) {
         if (status === "success") {
             $("#CONTENT").html(data);
         }
+    }).fail(function(error) {
+            console.log("Page load failed: " + page);
+            $.get("html/home.html", function(data, status) {
+                if (status === "success") {
+                    $("#CONTENT").html(data);
+                }
+        });
     });
 });
