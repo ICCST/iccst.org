@@ -81,11 +81,17 @@ function toggleButton(event) {
     $('.navContainer').addClass('navResponsive');
 }
 
-function loadPage(event, page, btnClass) {
+function loadPage(event, page, btnClass, anchor) {
     $.get(page, function(data, status) {
         if (status === "success") {
             $("#CONTENT").html(data);
             toggleButton(event);
+
+            document.body.scrollTop = 0;
+            if (anchor !== undefined) {
+                document.location.hash = anchor
+                window.history.replaceState({path: "/iccst-2025/"}, "", "/iccst-2025/");
+            }
         }
     });
 }
