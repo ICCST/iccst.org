@@ -76,6 +76,26 @@ p {
  * appearance of special parts
  */
 
+.subheading {
+    font-size: 60%;
+    font-style: italic;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.flexDisp {
+    display: flex;
+    align-items: end;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* program */
 
 .programTable {
