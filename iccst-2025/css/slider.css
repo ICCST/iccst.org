@@ -17,8 +17,6 @@
     height: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     background: rgba(0, 0, 0, 0.6);
-    border: 11px solid #b8b0b0;
-    border-style: groove;
 }
 
 .overlay .close {
