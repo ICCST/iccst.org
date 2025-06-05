@@ -71,6 +71,20 @@ p {
 /*
  * appearance of special parts
  */
+.personName {
+    font-weight: bold;
+    font-size: 1.17em;
+}
+
+.personList {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.personList li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
 .subheading {
     font-size: 60%;
