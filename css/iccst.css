@@ -54,7 +54,8 @@ td {
   margin-top: 10px;
   font-size: 600%;
   font-weight: bold;
-  color: #cc2; }
+  color: #cc2;
+  text-shadow: 4px 4px #000; }
 
 .iccst_subheading {
   margin-bottom: 1em;
