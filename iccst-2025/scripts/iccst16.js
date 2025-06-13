@@ -98,7 +98,12 @@ function loadPage(event, page, btnClass, anchor) {
 
 $().ready(function() {
     let page = document.location.search;
-    window.history.replaceState({path: "/iccst-2025/"}, "", "/iccst-2025/");
+    try {
+        window.history.replaceState({path: "/iccst-2025/"}, "", "/iccst-2025/");
+    } catch (error) {
+        // ignore: messing with window history might not be allowed
+    }
+
     if ((page.length < 2) || (!  /^[0-9A-Za-z_]+$/.test(page.substring(1)))) {
         page = "html/home.html";
     } else {
