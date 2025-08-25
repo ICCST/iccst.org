@@ -71,6 +71,22 @@ p {
 /*
  * appearance of special parts
  */
+.chairCell {
+    position: relative;
+    width: 40px;
+    background-color: #bfb;
+}
+.chairText {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    transform: rotate(270deg);
+    transform-origin: left top;
+}
+
 .personName {
     font-weight: bold;
     font-size: 1.17em;
